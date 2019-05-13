@@ -32,9 +32,9 @@ Then use the below command to add your self to the 'docker' group
 ```
 $ sudo usermod -aG docker $USER
 ```
-### 3. Clone this repository to directory <webpyjnb> with below command
+### 3. Clone this repository to a local directory <webpyjnb> with below command
 ```
-$ get clone https://github.com/ShifaSZ/webpyjnb.git
+$ get clone https://github.com/ShifaSZ/webpyjnb.git <webpyjnb>
 ```
 
 ## Create and configure Nginx Container
