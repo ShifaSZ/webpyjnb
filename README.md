@@ -1,4 +1,4 @@
-# Python Jupyter Notebook Web server
+# Python Jupyter Notebook Web Server
 Setting up a Python Jupyter Notebook Web Server with Docker containers.
 
 ## Objectives
@@ -120,13 +120,15 @@ In web:/etc/nginx/conf.d/notebook.conf, create a location directive for each of 
         proxy_read_timeout 86400;
     }
 ```
+Restart the web container.
+
 You have to change the "notebook" after "location" and "proxy_pass" to the URL path you choose.
 #### 2. Modify the base URL for jupyter notebook
 In file <webpyjnb_home>/notebook/jupyter_notebook_config.py, look for below item:
 ```
 c.NotebookApp.base_url = '/notebook'
 ```
-Replace the "notebook" to the URL path you choose and restart the web container.
+Replace the "notebook" to the URL path you choose and restart the notebook container.
 
 ## Usage
 You can open https://you.domain.name.com/notebook to use the jupyter notebook.
