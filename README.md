@@ -126,7 +126,7 @@ In file <webpyjnb_home>/notebook/jupyter_notebook_config.py, look for below item
 ```
 c.NotebookApp.base_url = '/notebook'
 ```
-Replace the "notebook" to the URL path you choose.
+Replace the "notebook" to the URL path you choose and restart the web container.
 
 ## Usage
 You can open https://you.domain.name.com/notebook to use the jupyter notebook.
