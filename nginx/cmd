@@ -1,0 +1,8 @@
+$ docker build -t webpyjnb/nginx .
+
+$ docker run -d --name=web -p 80:80 -p 443:443 webpyjnb/nginx
+
+$ docker exec -it web bash
+
+# certbot --nginx
+
