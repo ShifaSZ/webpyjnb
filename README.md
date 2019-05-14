@@ -40,12 +40,14 @@ $ get clone https://github.com/ShifaSZ/webpyjnb.git <webpyjnb>
 ## Create and configure Nginx Container
 If you have a Nginx server has been set up, you can simply copy the file <webpyjnb_home>/nginx/notebook.conf into /etc/nginx/conf.d/., and use command '$ certbot --nginx' to configure the ssl certificate. Otherwise, use below steps to create a new nginx server in a container:
 ### Create a docker image with nginx and certbot in it.
-Modify the domain name for the server_name in <webpyjnb_home>/nginx/notebook.conf to your own domain name. If you don't have a domain name, use your server IP address should also work.
 Run below commands:
 ```
 $ cd <webpyjnb_home>/nginx
+<modify the domain for server_name in notebook.conf>
 $ docker build -t webpyjnb/nginx .
 ```
+When modify the domain name, use your own domain name for the jupyter notebook server.
+
 ### Create a container withe image just created
 ```
 $ docker run -d --name=web -p 80:80 -p 443:443 webpyjnb/nginx
